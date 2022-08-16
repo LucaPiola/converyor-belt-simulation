@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot name="red_box">
+
+<link name="base_link">
+<collision>
+
+<geometry>
+<mesh
+filename="package://car.stl" scale="1 1 1" />
+</geometry>
+</collision>
+
+<visual>
+
+<geometry>
+<mesh
+filename="package://car.stl" scale="1 1 1" />
+</geometry>
+</visual>
+
+<inertial>
+<mass value="10" />
+<inertia
+ixx="0.233" ixy="0"  ixz="0.001"
+      iyy="0.48" iyz="0.8"
+      izz="0.233" />
+  </inertial>
+</link>
+
+<gazebo reference="base_link">
+<material>red</material>
+<mu1>5</mu1>
+<mu2>5</mu2>
+</gazebo>
+</robot>
